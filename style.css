@@ -81,6 +81,7 @@ p{
     color: var(--color-black);
     margin: 4px 0px;
 }
+
 /* Navbar */
 #navbar{
     display: flex;
@@ -117,6 +118,7 @@ p{
     color: var(--color-white);
     display: none;
 }
+
 /* Home */
 #home{
     background: url('images/main_back.png') center/cover no-repeat;
@@ -153,6 +155,7 @@ p{
     max-width: 1200px;
     margin: auto;
 }
+
 /* About */
 .about__majors{
     display:flex;
@@ -341,6 +344,7 @@ p{
     height: 2px;
     background-color: var(--color-white);
 }
+
 /* Testimonial */
 #testimonials{
     background-color: var(--color-light-white);
@@ -379,6 +383,7 @@ p{
 .testimonial__bubble a{
     color: var(--color-dark-blue);
 }
+
 /* Contact */
 #contact{
     background-color: var(--color-light-blue);
@@ -402,6 +407,7 @@ p{
 .contact__right{
     color: var(--color-light-white);
 }
+
 /* 768px screen width */
 @media screen and (max-width: 768px){
     .navbar__toggle-btn{
@@ -416,5 +422,29 @@ p{
         text-align: center;
         width: 100%;
         display: none;
+    }
+    .about__majors{
+        flex-direction: column;
+    }
+    .major{
+        margin-bottom: 38px;
+    }
+    .skillset{
+        flex-direction: column;
+    }
+    .project{
+        flex-grow: 1;
+    }
+    .testimonial__bubble p{
+        font-size: var(--font-small);
+    }
+    .testimonial__bubble p:last-child{
+        font-size: var(--font-micro);
+        margin: 10px 0 0 0;
+        top: 0px;
+    }
+    .testimonial__avatar{
+        width: 80px;
+        height: 80px;
     }
 }
