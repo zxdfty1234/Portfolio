@@ -11,6 +11,7 @@
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-blue: #73aace;
+    --color-dark-blue: #4d94c4;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
 
@@ -43,8 +44,16 @@ a{
     color: var(--color-white);
 }
 ul{
-    list-style: none;
     padding-left: 0;
+}
+li{
+    list-style: none;
+}
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 /* Typography */
 h1{
@@ -75,7 +84,7 @@ p{
 #navbar{
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-pink);
+    background-color: var(--color-blue);
     align-items: center;
     color: var(--color-white);
     padding: 16px;
@@ -97,5 +106,30 @@ p{
     border: 1px solid var(--color-white);
 }
 .navbar__menu__item:hover{
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-dark-blue);
+}
+/* Home */
+#home{
+    background: url('images/main_back.png') center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+}
+.home__title, .home__description{
+    color: var(--color-white);
+}
+
+.home__contact{
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-light-white);
+    border-radius: var(--size-border-radius);
 }
