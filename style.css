@@ -64,7 +64,7 @@ h1{
     margin: 16px 0px;
 }
 h2{
-    font-size: var(--font-regular);
+    font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0px;
@@ -108,6 +108,14 @@ p{
 }
 .navbar__menu__item:hover{
     background-color: var(--color-dark-blue);
+}
+.navbar__toggle-btn{
+    position: absolute;
+    top: 25px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
 }
 /* Home */
 #home{
@@ -272,6 +280,7 @@ p{
     height: 24px;
     display: inline-block;
     position: relative;
+    line-height: 24px;
     left: 5px;
     bottom: -15px;
     opacity: 0;
@@ -359,10 +368,53 @@ p{
 .testimonial__bubble p{
     color: var(--color-light-grey);
 }
+.testimonial__bubble p:first-child{
+    position: relative;
+    top: 10px;
+}
 .name{
     position: relative;
     top: 50px;
 }
 .testimonial__bubble a{
     color: var(--color-dark-blue);
+}
+/* Contact */
+#contact{
+    background-color: var(--color-light-blue);
+}
+.contact__title,
+.contact__email{
+    color: var(--color-white);
+}
+.contact__title{
+    margin: 32px 0;
+}
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+.contact__links i:hover{
+    transform: scale(1.2);
+    color: var(--color-blue);
+    transition: 200ms;
+}
+.contact__right{
+    color: var(--color-light-white);
+}
+/* 768px screen width */
+@media screen and (max-width: 768px){
+    .navbar__toggle-btn{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
 }
