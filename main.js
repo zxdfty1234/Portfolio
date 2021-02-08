@@ -27,9 +27,23 @@ const contact = document.querySelector('.home__contact');
 contact.addEventListener('click', (event)=>{
     scrollMove('#contact');
 });
+
+// transparent home
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=>{
+    home.style.opacity= 1-window.scrollY/homeHeight
+    
+})
+
+
+
+
+
 function scrollMove(selection){
     const scrollTo = document.querySelector(selection);
     const top = scrollTo.offsetTop - navbarHeight < 0 ? 0 : scrollTo.offsetTop - navbarHeight;
     const left = scrollTo.offsetLeft;
     window.scrollTo({top:top, left:left, behavior:'smooth'});
 }
+
