@@ -3,11 +3,33 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () =>{
-    console.log(window.scrollY);
-    console.log('navbarHeight'+navbarHeight);
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--dark');
     }else{
         navbar.classList.remove('navbar--dark');
     }
 });
+
+// click scroll
+const navtarget = document.querySelector('.navbar__menu');
+navtarget.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+    if(link == null){
+        return;
+    }
+    // console.log(event.target.dataset.link);
+    scrollMove(link);
+});
+
+// click contact me
+const contact = document.querySelector('.home__contact');
+contact.addEventListener('click', (event)=>{
+    scrollMove('#contact');
+});
+function scrollMove(selection){
+    const scrollTo = document.querySelector(selection);
+    const top = scrollTo.offsetTop - navbarHeight < 0 ? 0 : scrollTo.offsetTop - navbarHeight;
+    const left = scrollTo.offsetLeft;
+    window.scrollTo({top:top, left:left, behavior:'smooth'});
+}

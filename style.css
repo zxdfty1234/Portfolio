@@ -97,6 +97,7 @@ p{
 #navbar.navbar--dark{
     background-color: var(--color-blue);
     padding: 8px;
+    z-index: 99;
 }
 .navbar__menu{
     display: flex;
@@ -407,10 +408,12 @@ p{
     font-size: var(--font-large);
     margin: 24px 0;
 }
+.contact__links i{
+    transition: 200ms;
+}
 .contact__links i:hover{
     transform: scale(1.2);
     color: var(--color-blue);
-    transition: 200ms;
 }
 .contact__right{
     color: var(--color-light-white);
