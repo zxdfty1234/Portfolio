@@ -85,11 +85,18 @@ p{
 /* Navbar */
 #navbar{
     display: flex;
+    width: 100%;
+    position: fixed;
     justify-content: space-between;
-    background-color: var(--color-blue);
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    background-color: transparent;
+    transition: 200ms;
+}
+#navbar.navbar--dark{
+    background-color: var(--color-blue);
+    padding: 8px;
 }
 .navbar__menu{
     display: flex;
@@ -123,6 +130,7 @@ p{
 #home{
     background: url('images/main_back.png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 .home__avatar{
