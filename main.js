@@ -32,12 +32,23 @@ contact.addEventListener('click', (event)=>{
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{
-    home.style.opacity= 1-window.scrollY/homeHeight
-    
-})
+    home.style.opacity= 1-window.scrollY/homeHeight;
+});
 
+// UP-Arrow
+const arrow = document.querySelector('.goto-up');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight /2){
+        arrow.classList.add('visible');
+    }else{
+        arrow.classList.remove('visible');
+    }
+});
 
-
+// click UP-Arrow and go to top
+arrow.addEventListener('click',()=>{
+    window.scrollTo({top:0, left:0, behavior:'smooth'});
+});
 
 
 function scrollMove(selection){
